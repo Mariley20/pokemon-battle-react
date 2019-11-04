@@ -40,7 +40,8 @@ class PokemonBattle extends Component {
 
   removeSelectedPokemons (item) {
     let { selectedPokemons } = this.state
-    const index = selectedPokemons.findIndex(val => val.id === item.id)
+    const index = selectedPokemons.findIndex(val => val.id !== item.id)
+    console.log(index, selectedPokemons.length)
     if (selectedPokemons.length <= 1) {
       this.setState({ selectedPokemons: [] })
     } else {
