@@ -1,22 +1,72 @@
-.App {
-  text-align: center;
+.container {
+  padding: 1rem 5rem;
 }
 
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.cards {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.card {
+  width: 10rem;
+  border: 1px solid #ccc;
+  border-radius: 5%;
+  margin: .5rem;
+  transition: all 0.4s ease-out /* all .3s;*/
+}
+
+.card:hover {
+  margin-top: .3rem ;
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
+  border: 1px solid transparent;
+}
+
+.card__header {
+  text-align: center;
+  padding: .4rem .3rem;
+}
+.card__container {
+  width: 100%;
+}
+.card__container img {
+  width: 100%;
+  /* padding: 0 .5rem; */
+  object-fit: contain;
+}
+
+.card__text {
+  font-size: .9rem;
+  padding: 0 .5rem .5rem .5rem;
+}
+.card__text p {
+  margin: 0;
+}
+
+.card__action {
+  padding: .4rem;
+  border-top: 1px solid #ccc;
+}
+.card__action button {
+  width: 100%;
+  margin: .2rem 0;
+  border-radius: 5%;
+  border: 1px solid transparent;
+  line-height: 1.5;
+  font-size: .8rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.danger {
+  background: red;
   color: white;
 }
-
-.App-link {
-  color: #09d3ac;
+.primary {
+  background: #17a2b8;
+  color: white;
+}
+.success {
+  background: green;
+  color: white;
 }
